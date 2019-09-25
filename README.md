@@ -42,8 +42,8 @@ Notes: the most commonly queried fields are suburb, client name and email addres
 `source venv/bin/activate`
 5. Install requirements:
 `cd python_test && pip install -r requirements.txt`
-6. Make migrations and migrate the database:
-`python manage.py makemigrations && python manage.py migrate`
+6. Migrate the database:
+`python manage.py migrate`
 7. Start server:
 `python manage.py runserver`
 8. Server should start at 8000 port
@@ -52,6 +52,9 @@ Notes: the most commonly queried fields are suburb, client name and email addres
 ##Routes:
 
 `/client/create` - create instance of Client
+
 `/client/{id}` - view instance of Client by id
+
 `/client/{id}/update` - update instance of Client
+
 `/client/list` - list all of the Client instances
