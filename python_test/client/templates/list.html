@@ -1,0 +1,46 @@
+<h1>Clients</h1>
+Find by:
+<form method="get">
+    <p>
+        Client name:
+        <input name="client_name"/>
+    </p>
+    <p>
+        E-mail address:
+        <input name="email_address"/>
+    </p>
+    <p>
+        Suburb:
+        <input name="suburb"/>
+    </p>
+    <p>
+        Phone number:
+        <input name="phone_number"/>
+    </p>
+    <button type="submit">Find</button>
+</form>
+<table>
+    <tr>
+        <th><a href="?ordering=client_name">client_name</a></th>
+        <th><a href="?ordering=contact_name">contact_name</a></th>
+        <th><a href="?ordering=email_address">email_address</a></th>
+        <th><a href="?ordering=phone_number">phone_number</a></th>
+        <th><a href="?ordering=street_name">street_name</a></th>
+        <th><a href="?ordering=suburb">suburb</a></th>
+        <th><a href="?ordering=postcode">postcode</a></th>
+        <th></th>
+    </tr>
+    {% for client in object_list %}
+        <tr>
+            <td>{{ client.client_name }}</td>
+            <td>{{ client.contact_name }}</td>
+            <td>{{ client.email_address }}</td>
+            <td>{{ client.phone_number }}</td>
+            <td>{{ client.street_name }}</td>
+            <td>{{ client.suburb }}</td>
+            <td>{{ client.postcode }}</td>
+            <td><a href="client/{{ client.id }}/update">[update]</a></td>
+        </tr>
+    {% empty %}
+    {% endfor %}
+</table>
