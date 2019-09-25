@@ -31,7 +31,7 @@ Notes: the most commonly queried fields are suburb, client name and email addres
     * each record should link to the update view from 3.
 
 
-##Launch instruction:
+## Launch instruction:
 
 1. Install [Python 3.7](https://www.python.org/downloads/)
 2. With pip3 install package virtualenv:
@@ -49,7 +49,7 @@ Notes: the most commonly queried fields are suburb, client name and email addres
 8. Server should start at 8000 port
 
 
-##Routes:
+## Routes:
 
 `/client/create` - create instance of Client
 
