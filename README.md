@@ -29,3 +29,29 @@ Notes: the most commonly queried fields are suburb, client name and email addres
     * a search by client suburb
     * the ability to order by name, email address, phone number and suburb
     * each record should link to the update view from 3.
+
+
+##Launch instruction:
+
+1. Install [Python 3.7](https://www.python.org/downloads/)
+2. With pip3 install package virtualenv:
+`pip3 install virtualenv`
+3. Create virtualenv without site packages:
+`virtualenv --no-site-packages venv`
+4. Activate virtualenv:
+`source venv/bin/activate`
+5. Install requirements:
+`cd python_test && pip install -r requirements.txt`
+6. Make migrations and migrate the database:
+`python manage.py makemigrations && python manage.py migrate`
+7. Start server:
+`python manage.py runserver`
+8. Server should start at 8000 port
+
+
+##Routes:
+
+`/client/create` - create instance of Client
+`/client/{id}` - view instance of Client by id
+`/client/{id}/update` - update instance of Client
+`/client/list` - list all of the Client instances
